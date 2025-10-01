@@ -1,4 +1,3 @@
-// Este é o código correto para /src/pages/Admin.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
@@ -7,14 +6,16 @@ function Admin() {
   const [perfumes, setPerfumes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [autenticado, setAutenticado] = useState(false);
-  const promptJaMostrado = useRef(false);
+  const authEffectRan = useRef(false); // Usamos o useRef para controlar a execução
 
+  // Efeito para a senha, corrigido para não dar aviso
   useEffect(() => {
-    if (!autenticado && !promptJaMostrado.current) {
-      promptJaMostrado.current = true;
+    // Só roda se o efeito ainda não rodou nesta montagem
+    if (authEffectRan.current === false) {
       const senha = prompt("Por favor, digite a senha de administrador:");
       if (senha) {
-        fetch('http://127.0.0.1:5000/api/login', {
+        // Usamos a variável de ambiente para a URL da API
+        fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ senha: senha }),
@@ -29,13 +30,18 @@ function Admin() {
         })
         .catch(error => console.error("Erro ao autenticar:", error));
       }
+      // Marca que o efeito já rodou
+      return () => {
+        authEffectRan.current = true;
+      }
     }
-  }, []);
+  }, []); // O array vazio está correto, pois só queremos rodar na montagem
 
+  // Efeito para buscar os perfumes, só roda depois de autenticado
   useEffect(() => {
     if (autenticado) {
       setLoading(true);
-      fetch('http://127.0.0.1:5000/api/perfumes')
+      fetch(`${process.env.REACT_APP_API_URL}/api/perfumes`)
         .then(response => response.json())
         .then(data => {
           setPerfumes(data);
@@ -48,9 +54,10 @@ function Admin() {
     }
   }, [autenticado]);
 
+  // Função para apagar um perfume
   const handleDelete = (perfumeId) => {
     if (window.confirm('Tem certeza que deseja apagar este perfume?')) {
-      fetch(`http://127.0.0.1:5000/api/perfumes/${perfumeId}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/api/perfumes/${perfumeId}`, {
         method: 'DELETE',
       })
       .then(response => {
@@ -76,6 +83,7 @@ function Admin() {
   }
 
   return (
+    // O JSX da tabela continua o mesmo
     <div className="admin-container">
       <h1>Painel Administrativo</h1>
       <div className="admin-actions">
