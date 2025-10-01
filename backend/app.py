@@ -22,6 +22,9 @@ else:
 
 
 # --- ROTAS DA API ---
+@app.route('/')
+def index():
+    return jsonify({"status": "API está no ar e funcionando!"})
 
 @app.route('/api/perfumes', methods=['GET'])
 def get_perfumes():

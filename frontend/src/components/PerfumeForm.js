@@ -54,11 +54,10 @@ function PerfumeForm({ initialData }) {
     };
 
     // Define a URL e o método corretos (PUT para editar, POST para adicionar)
-    const url = isEditing
-      ? `http://127.0.0.1:5000/api/perfumes/${initialData.id}`
-      : 'http://127.0.0.1:5000/api/perfumes';
-    
-    const method = isEditing ? 'PUT' : 'POST';
+    const apiUrlBase = process.env.REACT_APP_API_URL;
+const url = isEditing
+  ? `${apiUrlBase}/api/perfumes/${initialData.id}`
+  : `${apiUrlBase}/api/perfumes`;
 
     fetch(url, {
       method: method,

@@ -7,7 +7,7 @@ function EditPerfume() {
   const [perfumeData, setPerfumeData] = useState(null); 
 
   useEffect(() => {
-  fetch(`http://127.0.0.1:5000/api/perfumes/${perfumeId}`)
+  fetch(`${process.env.REACT_APP_API_URL}/api/perfumes/${perfumeId}`)
     .then(res => res.json())
     .then(data => {
       console.log("PASSO 1: EditPerfume RECEBEU da API:", data); 
