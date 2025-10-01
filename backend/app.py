@@ -7,32 +7,32 @@ from sqlalchemy import create_engine, text
 app = Flask(__name__)
 CORS(app)
 
-# --- CONFIGURAÇÃO HÍBRIDA DO BANCO DE DADOS ---
-# Procura a URL do banco de dados do Render
+# --- CONFIGURAÇÃO HÍBRIDA E SEGURA DO BANCO DE DADOS ---
 DATABASE_URL = os.getenv('DATABASE_URL')
+engine = None
 
 if DATABASE_URL:
     # Se estiver no Render, usa a URL do PostgreSQL
     engine = create_engine(DATABASE_URL)
 else:
     # Se estiver rodando localmente, usa o arquivo SQLite
-    # O caminho para o SQLite precisa do prefixo 'sqlite:///'
-    engine = create_engine("sqlite:///perfumes.db")
+    # Garante que o arquivo de banco de dados seja encontrado no mesmo diretório do script
+    db_path = os.path.join(os.path.dirname(__file__), 'perfumes.db')
+    engine = create_engine(f"sqlite:///{db_path}")
 
 
-# --- Nossas rotas da API continuam iguais, pois o 'engine' cuida da conexão ---
+# --- ROTAS DA API ---
 
 @app.route('/api/perfumes', methods=['GET'])
 def get_perfumes():
     with engine.connect() as conn:
         result = conn.execute(text('SELECT * FROM perfumes ORDER BY id')).fetchall()
         perfumes = [dict(row._mapping) for row in result]
-        # Para SQLite, os dados JSON são strings e precisam ser convertidos
-        if not DATABASE_URL:
-            for p in perfumes:
-                p['uso'] = json.loads(p['uso'])
-                p['acordes'] = json.loads(p['acordes'])
-                p['precos'] = json.loads(p['precos'])
+        # Converte os dados JSON de volta para listas/objetos, pois o SQLite os armazena como texto
+        for p in perfumes:
+            if isinstance(p.get('uso'), str): p['uso'] = json.loads(p['uso'])
+            if isinstance(p.get('acordes'), str): p['acordes'] = json.loads(p['acordes'])
+            if isinstance(p.get('precos'), str): p['precos'] = json.loads(p['precos'])
         return jsonify(perfumes)
 
 @app.route('/api/perfumes/<int:id>', methods=['GET'])
@@ -43,15 +43,11 @@ def get_single_perfume(id):
             return jsonify({'erro': 'Perfume não encontrado'}), 404
         
         perfume = dict(result._mapping)
-        if not DATABASE_URL:
-            perfume['uso'] = json.loads(perfume['uso'])
-            perfume['acordes'] = json.loads(perfume['acordes'])
-            perfume['precos'] = json.loads(perfume['precos'])
+        if isinstance(perfume.get('uso'), str): perfume['uso'] = json.loads(perfume['uso'])
+        if isinstance(perfume.get('acordes'), str): perfume['acordes'] = json.loads(perfume['acordes'])
+        if isinstance(perfume.get('precos'), str): perfume['precos'] = json.loads(perfume['precos'])
             
         return jsonify(perfume)
-
-# O resto do seu app.py (rotas POST, PUT, DELETE, login) está perfeito e não precisa de grandes mudanças,
-# pois a lógica de escrita do SQLAlchemy é compatível com ambos. Vamos colar tudo aqui para garantir.
 
 @app.route('/api/perfumes', methods=['POST'])
 def add_perfume():
@@ -103,7 +99,7 @@ def delete_perfume(id):
 
 @app.route('/api/login', methods=['POST'])
 def login():
-    SENHA_SECRETA = "PLF&*@(&#788908e320)" 
+    SENHA_SECRETA = os.getenv('ADMIN_PASSWORD', 'PLF&*@(&#788908e320)')
     dados = request.get_json()
     senha_tentativa = dados.get('senha')
     if senha_tentativa == SENHA_SECRETA:
