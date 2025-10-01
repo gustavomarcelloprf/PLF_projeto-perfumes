@@ -9,14 +9,24 @@ function Catalogo() {
   const [generoSelecionado, setGeneroSelecionado] = useState('');
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/perfumes`)
-      .then(response => response.json())
-      .then(data => {r
+    // Usamos a variável de ambiente para a URL base da API
+    const apiUrl = `${process.env.REACT_APP_API_URL}/api/perfumes`;
+    
+    console.log("Buscando perfumes de:", apiUrl);
+
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Erro de rede: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
         setPerfumes(data);
         setLoading(false);
       })
       .catch(error => {
-        console.error("Erro ao buscar dados da API:", error);
+        console.error("Falha ao buscar dados no Catalogo.js:", error);
         setLoading(false);
       });
   }, []);

@@ -53,20 +53,19 @@ function PerfumeForm({ initialData }) {
       imagem_url: imagemUrl,
     };
 
-    // Define a URL e o método corretos (PUT para editar, POST para adicionar)
-    const apiUrlBase = process.env.REACT_APP_API_URL;
-const url = isEditing
-  ? `${apiUrlBase}/api/perfumes/${initialData.id}`
-  : `${apiUrlBase}/api/perfumes`;
+    // A URL e o método da requisição agora dependem se estamos editando ou adicionando
+    const url = isEditing
+      ? `${process.env.REACT_APP_API_URL}/api/perfumes/${initialData.id}`
+      : `${process.env.REACT_APP_API_URL}/api/perfumes`;
+    const method = isEditing ? 'PUT' : 'POST';
 
     fetch(url, {
-      method: method,
+      method: method, // Agora a variável 'method' existe
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(perfumeData),
     })
     .then(response => response.json())
     .then(data => {
-      // Mensagem de alerta
       alert(`Perfume ${isEditing ? 'atualizado' : 'adicionado'} com sucesso!`);
       navigate('/admin');
     })
