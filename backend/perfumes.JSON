@@ -1,0 +1,633 @@
+[
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Le Male",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "baunilha", "especiado fresco", "lavanda", "especiado quente", "verde", "atalcado", "doce", "âmbar", "canela"],
+    "precos": [{"tamanho": "75ml", "valor": "R$400"}, {"tamanho": "125ml", "valor": "R$460"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Le Beau Le Parfum",
+    "uso": ["Diurno", "Noturno"],
+    "acordes": ["doce", "amadeirado", "coco", "âmbar", "baunilha", "tropical", "frutado", "atalcado", "lactônico", "íris"],
+    "precos": [{"tamanho": "75ml", "valor": "R$430"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Le Beau EDT",
+    "uso": ["Versátil", "Diurno"],
+    "acordes": ["coco", "baunilha", "doce", "citrinos", "lactônico", "aromático", "âmbar", "tropical", "especiado fresco", "amendoado"],
+    "precos": [{"tamanho": "75ml", "valor": "R$430"}, {"tamanho": "125ml", "valor": "R$520"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Le Male Le Parfum",
+    "uso": ["Noturno"],
+    "acordes": ["especiado quente", "baunilha", "lavanda", "aromático", "atalcado", "íris", "amadeirado", "âmbar", "violeta"],
+    "precos": [{"tamanho": "75ml", "valor": "R$460"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Le Male Elixir",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "doce", "mel", "âmbar", "aromático", "lavanda", "tabaco", "verde", "especiado fresco", "atalcado"],
+    "precos": [{"tamanho": "75ml", "valor": "R$480"}, {"tamanho": "125ml", "valor": "R$560"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Jean Paul Gaultier",
+    "nome": "Ultramale",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "frutado", "doce", "aromático", "canela", "especiado quente", "especiado fresco", "lavanda", "atalcado", "verde"],
+    "precos": [{"tamanho": "75ml", "valor": "R$420"}, {"tamanho": "125ml", "valor": "R$530"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Giorgio Armani",
+    "nome": "Aqua Di Gio",
+    "uso": ["Diurno"],
+    "acordes": ["citrinos", "aromático", "marinho", "especiado fresco", "floral", "amadeirado", "fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$450"}, {"tamanho": "200ml", "valor": "R$580"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Giorgio Armani",
+    "nome": "Aqua Di Gio Profondo",
+    "uso": ["Diurno"],
+    "acordes": ["marinho", "aromático", "citrinos", "especiado fresco", "fresco", "amadeirado", "mineral", "salgado", "lavanda"],
+    "precos": [{"tamanho": "125ml", "valor": "R$580"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Giorgio Armani",
+    "nome": "Aqua Di Gio Profondo Parfum",
+    "uso": ["Diurno"],
+    "acordes": ["marinho", "citrinos", "aromático", "patchouli", "salgado", "âmbar", "amadeirado", "floral amarelo", "aquático", "atalcado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$530"}, {"tamanho": "200ml", "valor": "R$630"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Emporio Armani",
+    "nome": "Stronger With You",
+    "uso": ["Noturno"],
+    "acordes": ["doce", "baunilha", "balsâmico", "amendoado", "aromático", "atalcado", "herbal", "lavanda", "especiado suave", "especiado quente"],
+    "precos": [{"tamanho": "50ml", "valor": "R$400"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Emporio Armani",
+    "nome": "Stronger With You Parfum",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "lavanda", "especiado suave", "amendoado", "balsâmico", "aromático", "doce", "herbal", "citrinos", "especiado quente"],
+    "precos": [{"tamanho": "50ml", "valor": "R$450"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "212 VIP Black",
+    "uso": ["Noturno"],
+    "acordes": ["aromático", "baunilha", "especiado suave", "anis", "lavanda", "almiscarado", "atalcado", "amargo", "doce"],
+    "precos": [{"tamanho": "50ml", "valor": "R$410"}, {"tamanho": "100ml", "valor": "R$500"}, {"tamanho": "200ml", "valor": "R$630"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "212 VIP Black Elixir",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "especiado suave", "lavanda", "doce", "atalcado", "balsâmico", "aromático", "anis"],
+    "precos": [{"tamanho": "100ml", "valor": "R$450"}, {"tamanho": "200ml", "valor": "R$520"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "CH Men",
+    "uso": ["Noturno"],
+    "acordes": ["couro", "baunilha", "doce", "amadeirado", "atalcado", "verde", "animálico", "especiado fresco", "citrinos", "fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$470"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "Bad Boy Cobalt",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "amadeirado", "frutado", "especiado fresco", "lavanda", "terroso", "doce", "especiado suave", "herbal", "rosa"],
+    "precos": [{"tamanho": "50ml", "valor": "R$410"}, {"tamanho": "100ml", "valor": "R$500"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "212 VIP Men",
+    "uso": ["Versátil"],
+    "acordes": ["especiado fresco", "aromático", "vodka", "amadeirado", "verde", "tropical", "frutado", "citrinos", "especiado quente", "fresco"],
+    "precos": [{"tamanho": "50ml", "valor": "R$420"}, {"tamanho": "100ml", "valor": "R$500"}, {"tamanho": "200ml", "valor": "R$600"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "212 Heroes",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "frutado", "herbal", "especiado quente", "doce", "cannabis", "fresco", "almiscarado", "especiado fresco", "aquático"],
+    "precos": [{"tamanho": "50ml", "valor": "R$410"}, {"tamanho": "90ml", "valor": "R$480"}, {"tamanho": "150ml", "valor": "R$620"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Issey Miyake",
+    "nome": "L'eau d'issey Pour Homme",
+    "uso": ["Diurno"],
+    "acordes": ["citrinos", "aromático", "especiado fresco", "amadeirado", "floral", "verde"],
+    "precos": [{"tamanho": "75ml", "valor": "R$400"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Yves Saint Laurent",
+    "nome": "Y EDP Intense",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "amadeirado", "especiado fresco", "especiado quente", "herbal", "terroso", "citrinos", "patchouli"],
+    "precos": [{"tamanho": "100ml", "valor": "R$600"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Prada",
+    "nome": "Luna Rossa Ocean",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "almiscarado", "atalcado", "lavanda", "herbal", "citrinos", "especiado fresco", "íris", "amadeirado", "terroso"],
+    "precos": [{"tamanho": "100ml", "valor": "R$460"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Prada",
+    "nome": "L'Homme",
+    "uso": ["Diurno"],
+    "acordes": ["atalcado", "íris", "violeta", "amadeirado", "especiado fresco", "especiado quente", "aromático", "terroso", "âmbar", "floral"],
+    "precos": [{"tamanho": "50ml", "valor": "R$510"}, {"tamanho": "100ml", "valor": "R$620"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Azzaro",
+    "nome": "Wanted",
+    "uso": ["Versátil"],
+    "acordes": ["aromático", "especiado fresco", "fresco", "citrinos", "âmbar", "amadeirado", "especiado quente", "frutado", "verde", "baunilha"],
+    "precos": [{"tamanho": "50ml", "valor": "R$380"}, {"tamanho": "100ml", "valor": "R$440"}],
+    "genero": "Masculino",
+    "imagem_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtFbSH1ZJsJlVATAOs-aQltBfsaOMbYN8aS2VQFRbRHuVQEJzvWUB-njeH&s=10"
+  },
+  {
+    "marca": "Animale",
+    "nome": "Animale Animale for Men",
+    "uso": ["Noturno"],
+    "acordes": ["mel", "doce", "amadeirado", "frutado", "baunilha", "tabaco", "atalcado", "patchouli", "floral", "âmbar"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}, {"tamanho": "200ml", "valor": "R$340"}],
+    "genero": "Masculino",
+    "imagem_url": "https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/20054363/6f045d91-a49f-4353-9137-b73a8574e407-animale-for-men-animale-eau-de-toilette-perfume-masculino-200ml.png"
+  },
+  {
+    "marca": "Nautica",
+    "nome": "Voyage",
+    "uso": ["Diurno"],
+    "acordes": ["verde", "frutado", "floral", "fresco", "atalcado", "aquático", "almiscarado", "amadeirado"],
+    "precos": [{"tamanho": "50ml", "valor": "R$100"}, {"tamanho": "100ml", "valor": "R$150"}],
+    "genero": "Masculino",
+    "imagem_url": "https://fimgs.net/mdimg/perfume-thumbs/375x500.913.jpg"
+  },
+  {
+    "marca": "Nautica",
+    "nome": "Voyage Heritage",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "especiado fresco", "amadeirado", "verde", "lavanda"],
+    "precos": [{"tamanho": "100ml", "valor": "R$150"}],
+    "genero": "Masculino",
+    "imagem_url": "https://fimgs.net/mdimg/perfume-thumbs/375x500.57679.jpg"
+  },
+  {
+    "marca": "Nautica",
+    "nome": "Voyage N-83",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "marinho", "especiado fresco", "verde", "amadeirado", "lavanda", "atalcado", "especiado quente", "almiscarado", "salgado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$150"}],
+    "genero": "Masculino",
+    "imagem_url": "https://m.media-amazon.com/images/I/61ve418ag7L._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "marca": "Nautica",
+    "nome": "Nautica Blue",
+    "uso": ["Diurno"],
+    "acordes": ["amadeirado", "frutado", "floral", "doce", "atalcado", "fresco", "citrinos", "floral branco", "aquático", "almiscarado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$150"}],
+    "genero": "Masculino",
+    "imagem_url": "https://fimgs.net/mdimg/perfume-thumbs/375x500.2480.jpg"
+  },
+  {
+    "marca": "Givenchy",
+    "nome": "Gentleman EDP",
+    "uso": ["Noturno"],
+    "acordes": ["especiado quente", "baunilha", "âmbar", "atalcado", "íris", "especiado fresco", "doce", "balsâmico", "terroso", "amadeirado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$460"}],
+    "genero": "Masculino",
+    "imagem_url": "https://opaque.vteximg.com.br/arquivos/ids/425709-625-625/GIVE-05-000169.png?v=638370700991400000"
+  },
+  {
+    "marca": "Montblanc",
+    "nome": "Legend EDT",
+    "uso": ["Diurno", "Versátil"],
+    "acordes": ["frutado", "doce", "aromático", "lavanda", "especiado fresco", "citrinos", "amadeirado", "baunilha", "herbal", "fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$420"}],
+    "genero": "Masculino",
+    "imagem_url": "https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/7902/f1ad27e7-dc15-4875-bc85-fe48c7dbd92a-montblanc-perfume-masculino-legend-pour-homme-eau-de-toilette.png"
+  },
+
+  {
+    "marca": "Paco Rabanne",
+    "nome": "1 Million",
+    "uso": ["Noturno"],
+    "acordes": ["especiado quente", "canela", "citrinos", "âmbar", "amadeirado", "couro", "rosa", "animálico", "verde", "patchouli"],
+    "precos": [{"tamanho": "100ml", "valor": "R$500"}, {"tamanho": "200ml", "valor": "R$580"}],
+    "genero": "Masculino",
+    "imagem_url": "https://img.lojasrenner.com.br/item/546594103/original/1.jpg"
+  },
+  {
+    "marca": "Paco Rabanne",
+    "nome": "Invictus",
+    "uso": ["Diurno", "Versátil"],
+    "acordes": ["citrinos", "marinho", "aromático", "especiado fresco", "amadeirado", "âmbar", "salgado", "floral branco", "aquático", "animálico"],
+    "precos": [{"tamanho": "50ml", "valor": "R$400"}, {"tamanho": "100ml", "valor": "R$500"}],
+    "genero": "Masculino",
+    "imagem_url": "https://cdn.sistemawbuy.com.br/arquivos/feb5eb39b3a2004abcc3bcd79041ba64/produtos/647e87164cc64/invictus-50ml-67f6f61eb6bdd.png"
+  },
+  {
+    "marca": "Paco Rabanne",
+    "nome": "Invictus Victory",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "âmbar", "doce", "aromático", "especiado suave", "lavanda", "atalcado", "especiado quente", "citrinos"],
+    "precos": [{"tamanho": "100ml", "valor": "R$500"}],
+    "genero": "Masculino",
+    "imagem_url": "https://cdn.sistemawbuy.com.br/arquivos/feb5eb39b3a2004abcc3bcd79041ba64/produtos/642f51589e35c/invictus-victory-50ml-67f6d4acdd7cc.jpg"
+  },
+  {
+    "marca": "Paco Rabanne",
+    "nome": "Invictus Victory Elixir",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "especiado quente", "âmbar", "aromático", "doce", "balsâmico", "lavanda", "especiado fresco"],
+    "precos": [{"tamanho": "200ml", "valor": "R$750"}],
+    "genero": "Masculino",
+    "imagem_url": "https://cdn.sistemawbuy.com.br/arquivos/feb5eb39b3a2004abcc3bcd79041ba64/produtos/648bb288578d6/20230615215329-648bb2896534c.jpg"
+  },
+  {
+    "marca": "Paco Rabanne",
+    "nome": "Phantom",
+    "uso": ["Noturno", "Versátil"],
+    "acordes": ["citrinos", "baunilha", "lavanda", "terroso", "aromático", "amadeirado", "esfumaçado", "frutado", "fresco", "especiado fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$540"}],
+    "genero": "Masculino",
+    "imagem_url": "https://aromedecapelin.cdn.magazord.com.br/img/2023/10/produto/4252/paco-rabanne-phantom.jpg?ims=fit-in/600x600/filters:fill(fff)"
+  },
+  {
+    "marca": "Paco Rabanne",
+    "nome": "Phantom Parfum",
+    "uso": ["Noturno"],
+    "acordes": ["aromático", "baunilha", "especiado quente", "citrinos", "lavanda", "atalcado", "amadeirado", "especiado fresco", "doce", "âmbar"],
+    "precos": [{"tamanho": "100ml", "valor": "R$550"}],
+    "genero": "Masculino",
+    "imagem_url": "https://img.lojasrenner.com.br/item/882063731/original/1.jpg"
+  },
+  {
+    "marca": "Versace",
+    "nome": "Eros EDT",
+    "uso": ["Versátil"],
+    "acordes": ["baunilha", "aromático", "verde", "especiado fresco", "âmbar", "frutado", "citrinos", "amadeirado", "doce", "fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$550"}],
+    "genero": "Masculino",
+    "imagem_url": "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dw2b53a325/images/hi-res-BR/8011003809219_01_1500px.jpg?sw=556&sh=680&sm=fit"
+  },
+  {
+    "marca": "Versace",
+    "nome": "Eros EDP",
+    "uso": ["Versátil"],
+    "acordes": ["citrinos", "aromático", "verde", "baunilha", "amadeirado", "especiado fresco", "frutado", "atalcado", "âmbar", "doce"],
+    "precos": [{"tamanho": "100ml", "valor": "R$560"}],
+    "genero": "Masculino",
+    "imagem_url": "https://fimgs.net/mdimg/perfume/o.62762.jpgF"
+  },
+  {
+    "marca": "Versace",
+    "nome": "Dylan Blue",
+    "uso": ["Versátil"],
+    "acordes": ["âmbar", "citrinos", "especiado fresco", "almiscarado", "aquático", "especiado quente", "amadeirado", "fresco", "aromático", "esfumaçado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$520"}],
+    "genero": "Masculino",
+    "imagem_url": "https://epocacosmeticos.vteximg.com.br/arquivos/ids/225614/dylan-blue-pour-homme-versace-perfume-masculino-eau-de-toilette5.jpg?v=636306389737330000"
+  },
+  {
+    "marca": "Valentino",
+    "nome": "Born in Roma Intense",
+    "uso": ["Versátil", "Noturno"],
+    "acordes": ["baunilha", "lavanda", "aromático", "amadeirado", "atalcado", "especiado fresco", "terroso", "doce"],
+    "precos": [{"tamanho": "50ml", "valor": "R$550"}, {"tamanho": "100ml", "valor": "R$770"}],
+    "genero": "Masculino",
+    "imagem_url": "https://fimgs.net/mdimg/perfume-thumbs/375x500.78740.jpg"
+  },
+  {
+    "marca": "Valentino",
+    "nome": "Born in Roma EDT",
+    "uso": ["Versátil", "Diurno"],
+    "acordes": ["mineral", "amadeirado", "ozônico", "aromático", "aquático", "salgado", "especiado fresco", "herbal", "verde", "fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$680"}],
+    "genero": "Masculino",
+    "imagem_url": "https://www.lojaglamourosa.com/resources/medias/shop/products/thumbnails/shop-brand-large/shop-pf-02544-02-valentino-uomo-born-in-roma-edt---100ml--1.jpg"
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Khamrah",
+    "uso": ["Noturno"],
+    "acordes": ["doce", "especiado quente", "baunilha", "âmbar", "canela", "amadeirado", "especiado fresco", "frutado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$280"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Fakhar Black",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "especiado fresco", "amadeirado", "frutado", "fresco", "citrinos", "lavanda", "âmbar", "verde", "herbal"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Fakhar Gold",
+    "uso": ["Noturno"],
+    "acordes": ["âmbar", "tuberosa", "floral branco", "citrinos", "aromático", "especiado quente", "animálico", "almiscarado", "especiado suave", "amadeirado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Asad",
+    "uso": ["Noturno"],
+    "acordes": ["âmbar", "especiado fresco", "baunilha", "amadeirado", "especiado quente", "doce", "tabaco", "atalcado", "patchouli", "balsâmico"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Asad Bourbon",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "aromático", "cacau", "doce", "âmbar", "lavanda", "especiado fresco", "especiado quente", "especiado suave", "atalcado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$300"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Oud for Glory",
+    "uso": ["Noturno"],
+    "acordes": ["oud", "especiado quente", "especiado fresco", "patchouli", "metálico", "almiscarado", "amadeirado", "lavanda", "terroso", "couro"],
+    "precos": [{"tamanho": "100ml", "valor": "R$280"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Maahir Legacy",
+    "uso": ["Diurno"],
+    "acordes": ["aromático", "especiado fresco", "citrinos", "verde", "amadeirado", "âmbar", "doce", "lavanda", "almiscarado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$300"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Al Noble Ameer",
+    "uso": ["Noturno"],
+    "acordes": ["especiado quente", "oud", "amadeirado", "aromático", "especiado fresco", "patchouli", "frutado", "âmbar", "especiado suave", "terroso"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Al Noble Safeer",
+    "uso": ["Diurno"],
+    "acordes": ["especiado fresco", "amadeirado", "aromático", "verde", "especiado quente", "citrinos", "âmbar", "herbal", "patchouli"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Qaed Al Fursan",
+    "uso": ["Diurno", "Versátil"],
+    "acordes": ["frutado", "doce", "tropical", "amadeirado", "fresco", "âmbar", "especiado quente", "floral branco", "oud", "especiado fresco"],
+    "precos": [{"tamanho": "90ml", "valor": "R$260"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lattafa",
+    "nome": "Yara",
+    "uso": ["Noturno"],
+    "acordes": ["doce", "baunilha", "atalcado", "tropical", "frutado", "almiscarado", "floral", "citrinos"],
+    "precos": [{"tamanho": "100ml", "valor": "R$280"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Armaf",
+    "nome": "Club de Nuit Intense Man",
+    "uso": ["Diurno"],
+    "acordes": ["citrinos", "frutado", "couro", "esfumaçado", "amadeirado", "aromático", "doce", "fresco", "almiscarado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$280"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "French Avenue",
+    "nome": "Liquid Brun",
+    "uso": ["Noturno"],
+    "acordes": ["especiado quente", "doce", "baunilha", "canela", "citrinos", "floral branco", "aromático", "almiscarado", "atalcado", "âmbar"],
+    "precos": [{"tamanho": "100ml", "valor": "R$420"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Amaran",
+    "nome": "Pure Aruba",
+    "uso": ["Diurno"],
+    "acordes": ["frutado", "citrinos", "doce", "almiscarado", "atalcado", "baunilha", "âmbar", "especiado fresco"],
+    "precos": [{"tamanho": "100ml", "valor": "R$300"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Asdaaf",
+    "nome": "Ameerat Al Arab",
+    "uso": ["Diurno"],
+    "acordes": ["citrinos", "floral branco", "almiscarado", "amadeirado", "fresco", "especiado fresco", "atalcado", "verde", "floral"],
+    "precos": [{"tamanho": "100ml", "valor": "R$230"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Maison Alhambra",
+    "nome": "Salvo",
+    "uso": ["Diurno"],
+    "acordes": ["especiado fresco", "citrinos", "âmbar", "lavanda", "aromático", "almiscarado", "herbal", "floral", "baunilha", "especiado suave"],
+    "precos": [{"tamanho": "100ml", "valor": "R$250"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Afnan",
+    "nome": "9PM",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "âmbar", "especiado quente", "frutado", "canela", "doce", "lavanda", "fresco", "aromático", "atalcado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$300"}],
+    "genero": "Masculino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Afnan",
+    "nome": "9AM",
+    "uso": ["Diurno"],
+    "acordes": ["frutado", "verde", "amadeirado", "especiado fresco", "citrinos", "aromático", "fresco", "especiado suave", "especiado quente", "balsâmico"],
+    "precos": [{"tamanho": "100ml", "valor": "R$320"}],
+    "genero": "Compartilhável",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lancôme",
+    "nome": "Idôle Aura",
+    "uso": ["Diurno"],
+    "acordes": ["baunilha", "rosa", "salgado", "atalcado", "floral branco", "almiscarado", "floral", "marinho", "doce"],
+    "precos": [{"tamanho": "100ml", "valor": "R$520"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lancôme",
+    "nome": "La Vie Est Belle",
+    "uso": ["Versátil", "Noturno"],
+    "acordes": ["doce", "baunilha", "frutado", "patchouli", "amadeirado", "floral branco", "atalcado", "íris", "terroso", "especiado quente"],
+    "precos": [{"tamanho": "100ml", "valor": "R$520"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Lancôme",
+    "nome": "Miracle",
+    "uso": ["Diurno"],
+    "acordes": ["floral", "citrinos", "especiado quente", "frutado", "especiado fresco", "fresco", "tropical", "floral branco", "almiscarado"],
+    "precos": [{"tamanho": "30ml", "valor": "R$400"}, {"tamanho": "50ml", "valor": "R$470"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Yves Saint Laurent",
+    "nome": "Libre",
+    "uso": ["Versátil"],
+    "acordes": ["floral branco", "citrinos", "lavanda", "baunilha", "aromático", "doce", "atalcado", "animálico", "amadeirado", "almiscarado"],
+    "precos": [{"tamanho": "30ml", "valor": "R$310"}, {"tamanho": "50ml", "valor": "R$460"}, {"tamanho": "90ml", "valor": "R$610"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Giorgio Armani",
+    "nome": "Sì Passione",
+    "uso": ["Noturno"],
+    "acordes": ["frutado", "doce", "amadeirado", "baunilha", "rosa", "especiado suave", "floral", "fresco", "atalcado", "citrinos"],
+    "precos": [{"tamanho": "30ml", "valor": "R$350"}, {"tamanho": "50ml", "valor": "R$300"}, {"tamanho": "100ml", "valor": "R$600"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Carolina Herrera",
+    "nome": "Good Girl Blush Elixir",
+    "uso": ["Noturno"],
+    "acordes": ["baunilha", "amadeirado", "floral amarelo", "citrinos", "patchouli", "doce", "rosa", "especiado quente", "balsâmico", "floral"],
+    "precos": [{"tamanho": "50ml", "valor": "R$500"}, {"tamanho": "100ml", "valor": "R$620"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Gucci",
+    "nome": "Flora Gorgeous Magnolia",
+    "uso": ["Diurno"],
+    "acordes": ["floral", "coco", "frutado", "almiscarado", "doce", "floral branco", "citrinos", "lactônico", "patchouli", "atalcado"],
+    "precos": [{"tamanho": "100ml", "valor": "R$630"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Prada",
+    "nome": "Paradoxe",
+    "uso": ["Versátil"],
+    "acordes": ["floral branco", "citrinos", "doce", "âmbar", "baunilha", "atalcado", "frutado", "almiscarado", "fresco"],
+    "precos": [{"tamanho": "30ml", "valor": "R$430"}, {"tamanho": "50ml", "valor": "R$620"}, {"tamanho": "100ml", "valor": "R$720"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Chloé",
+    "nome": "Chloé Eau de Parfum",
+    "uso": ["Diurno"],
+    "acordes": ["floral", "rosa", "fresco", "frutado", "floral branco"],
+    "precos": [{"tamanho": "30ml", "valor": "R$390"}, {"tamanho": "50ml", "valor": "R$500"}, {"tamanho": "75ml", "valor": "R$550"}, {"tamanho": "100ml", "valor": "R$600"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Burberry",
+    "nome": "Her",
+    "uso": ["Diurno"],
+    "acordes": ["frutado", "doce", "amadeirado", "atalcado", "almiscarado"],
+    "precos": [{"tamanho": "50ml", "valor": "R$470"}, {"tamanho": "100ml", "valor": "R$600"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Dolce&Gabbana",
+    "nome": "Devotion",
+    "uso": ["Versátil"],
+    "acordes": ["baunilha", "doce", "floral branco", "lactônico", "atalcado", "rum", "citrinos"],
+    "precos": [{"tamanho": "50ml", "valor": "R$600"}, {"tamanho": "100ml", "valor": "R$790"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  },
+  {
+    "marca": "Dolce&Gabbana",
+    "nome": "Devotion Intense",
+    "uso": ["Versátil"],
+    "acordes": ["baunilha", "amendoado", "floral branco", "doce", "amadeirado", "citrinos", "atalcado"],
+    "precos": [{"tamanho": "50ml", "valor": "R$660"}, {"tamanho": "100ml", "valor": "R$860"}],
+    "genero": "Feminino",
+    "imagem_url": ""
+  }
+]

@@ -1,0 +1,11 @@
+# Ambiente Python
+venv/
+
+# Arquivos do Mac
+.DS_Store
+
+# Pasta de dependências do Node
+frontend/node_modules
+
+# Arquivo de configuração local do frontend
+frontend/.env
