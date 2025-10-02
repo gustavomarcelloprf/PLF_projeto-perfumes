@@ -4,49 +4,18 @@ import '../App.css';
 
 function Admin() {
   const [perfumes, setPerfumes] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Precisamos dos dois
   const [autenticado, setAutenticado] = useState(false);
-  const authEffectRan = useRef(false); // Usamos o useRef para controlar a execução
+  const authEffectRan = useRef(false);
 
-  // Efeito para a senha, corrigido para não dar aviso
+  // Efeito da senha (sem alterações)
   useEffect(() => {
-    // Só roda se o efeito ainda não rodou nesta montagem
     if (authEffectRan.current === false) {
-      const senha = prompt("Por favor, digite a senha de administrador:");
-      if (senha) {
-        // Usamos a variável de ambiente para a URL da API
-        fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ senha: senha }),
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.acesso === 'permitido') {
-            setAutenticado(true);
-          } else {
-            alert("Senha incorreta!");
-          }
-        })
-        .catch(error => console.error("Erro ao autenticar:", error));
+      authEffectRan.current = true;
+      if (sessionStorage.getItem('isAdminAuthenticated') === 'true') {
+        setAutenticado(true);
+        return;
       }
-      // Marca que o efeito já rodou
-      return () => {
-        authEffectRan.current = true;
-      }
-    }
-  }, []); // O array vazio está correto, pois só queremos rodar na montagem
-
-  // Efeito para buscar os perfumes, só roda depois de autenticado
-  useEffect(() => {
-    // Primeiro, checa se já estamos autenticados na sessão
-    if (sessionStorage.getItem('isAdminAuthenticated') === 'true') {
-      setAutenticado(true);
-      return; // Para a execução e não pede a senha
-    }
-
-    // Se não estiver na sessão, continua com a lógica do prompt...
-    if (authEffectRan.current === false) {
       const senha = prompt("Por favor, digite a senha de administrador:");
       if (senha) {
         fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
@@ -57,7 +26,6 @@ function Admin() {
         .then(response => response.json())
         .then(data => {
           if (data.acesso === 'permitido') {
-            // Acesso liberado, salvamos na memória da sessão!
             sessionStorage.setItem('isAdminAuthenticated', 'true');
             setAutenticado(true);
           } else {
@@ -66,13 +34,29 @@ function Admin() {
         })
         .catch(error => console.error("Erro ao autenticar:", error));
       }
-      return () => {
-        authEffectRan.current = true;
-      }
     }
   }, []);
 
-  // Função para apagar um perfume
+  // Efeito para buscar os perfumes
+  useEffect(() => {
+    if (autenticado) {
+      setLoading(true); // Avisa que vai começar a carregar
+      fetch(`${process.env.REACT_APP_API_URL}/api/perfumes`)
+        .then(response => response.json())
+        .then(data => {
+          setPerfumes(data);
+          setLoading(false); // Avisa que terminou de carregar
+        })
+        .catch(error => {
+          console.error("Erro ao buscar dados:", error);
+          setLoading(false); // Avisa que terminou, mesmo com erro
+        });
+    } else {
+      setLoading(false); // Se não está autenticado, não fica carregando para sempre
+    }
+  }, [autenticado]);
+
+  // Função de apagar (sem alterações)
   const handleDelete = (perfumeId) => {
     if (window.confirm('Tem certeza que deseja apagar este perfume?')) {
       fetch(`${process.env.REACT_APP_API_URL}/api/perfumes/${perfumeId}`, {
@@ -96,12 +80,12 @@ function Admin() {
     return <div className="admin-container"><h1>Acesso Negado</h1><p>Atualize a página para tentar novamente.</p></div>;
   }
 
+  // A verificação 'loading' é importante aqui
   if (loading) {
     return <div className="admin-container"><h1>Carregando dados...</h1></div>;
   }
 
   return (
-    // O JSX da tabela continua o mesmo
     <div className="admin-container">
       <h1>Painel Administrativo</h1>
       <div className="admin-actions">
@@ -110,6 +94,7 @@ function Admin() {
         </Link>
       </div>
       <table className="admin-table">
+        {/* ... O resto da tabela continua igual ... */}
         <thead>
           <tr>
             <th>ID</th>
