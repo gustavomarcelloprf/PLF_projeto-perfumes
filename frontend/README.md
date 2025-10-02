@@ -1,4 +1,4 @@
-#  Recomendador de Perfumes 🌬️
+#  Recomendador de Perfumes 
 
 Aplicação web para apresentar e recomendar perfumes, com um catálogo público com filtros dinâmicos e um painel de administrativo completo para gerenciamento de produtos.
 
