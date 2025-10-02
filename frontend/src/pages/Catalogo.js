@@ -9,11 +9,9 @@ function Catalogo() {
   const [generoSelecionado, setGeneroSelecionado] = useState('');
 
   useEffect(() => {
-    // Usamos a variável de ambiente para a URL base da API
+    // Esta é a linha mais importante. Ela usa a variável de ambiente.
     const apiUrl = `${process.env.REACT_APP_API_URL}/api/perfumes`;
     
-    console.log("Buscando perfumes de:", apiUrl);
-
     fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
@@ -31,6 +29,7 @@ function Catalogo() {
       });
   }, []);
 
+  // O resto do seu código (useMemo, handlers, etc.) continua aqui...
   const todosAcordes = useMemo(() => {
     const setDeAcordes = new Set();
     perfumes.forEach(perfume => {
@@ -92,6 +91,7 @@ function Catalogo() {
   }
 
   return (
+    // O JSX (HTML) do seu catálogo continua aqui, sem alterações
     <div className="App">
       <h1>Catálogo de Perfumes</h1>
 
