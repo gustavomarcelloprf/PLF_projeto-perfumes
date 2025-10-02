@@ -39,20 +39,38 @@ function Admin() {
 
   // Efeito para buscar os perfumes, só roda depois de autenticado
   useEffect(() => {
-    if (autenticado) {
-      setLoading(true);
-      fetch(`${process.env.REACT_APP_API_URL}/api/perfumes`)
+    // Primeiro, checa se já estamos autenticados na sessão
+    if (sessionStorage.getItem('isAdminAuthenticated') === 'true') {
+      setAutenticado(true);
+      return; // Para a execução e não pede a senha
+    }
+
+    // Se não estiver na sessão, continua com a lógica do prompt...
+    if (authEffectRan.current === false) {
+      const senha = prompt("Por favor, digite a senha de administrador:");
+      if (senha) {
+        fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ senha: senha }),
+        })
         .then(response => response.json())
         .then(data => {
-          setPerfumes(data);
-          setLoading(false);
+          if (data.acesso === 'permitido') {
+            // Acesso liberado, salvamos na memória da sessão!
+            sessionStorage.setItem('isAdminAuthenticated', 'true');
+            setAutenticado(true);
+          } else {
+            alert("Senha incorreta!");
+          }
         })
-        .catch(error => {
-          console.error("Erro ao buscar dados:", error);
-          setLoading(false);
-        });
+        .catch(error => console.error("Erro ao autenticar:", error));
+      }
+      return () => {
+        authEffectRan.current = true;
+      }
     }
-  }, [autenticado]);
+  }, []);
 
   // Função para apagar um perfume
   const handleDelete = (perfumeId) => {

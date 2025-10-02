@@ -30,12 +30,16 @@ def index():
 def get_perfumes():
     with engine.connect() as conn:
         result = conn.execute(text('SELECT * FROM perfumes ORDER BY id')).fetchall()
+        # O nome da variável foi corrigido para 'perfumes'
         perfumes = [dict(row._mapping) for row in result]
-        # Converte os dados JSON de volta para listas/objetos, pois o SQLite os armazena como texto
+        
+        # A conversão agora acontece para cada perfume na lista
         for p in perfumes:
             if isinstance(p.get('uso'), str): p['uso'] = json.loads(p['uso'])
             if isinstance(p.get('acordes'), str): p['acordes'] = json.loads(p['acordes'])
             if isinstance(p.get('precos'), str): p['precos'] = json.loads(p['precos'])
+            
+        # Retorna a lista de perfumes já convertida
         return jsonify(perfumes)
 
 @app.route('/api/perfumes/<int:id>', methods=['GET'])
@@ -46,12 +50,13 @@ def get_single_perfume(id):
             return jsonify({'erro': 'Perfume não encontrado'}), 404
         
         perfume = dict(result._mapping)
+        # Garante que a conversão também aconteça aqui
         if isinstance(perfume.get('uso'), str): perfume['uso'] = json.loads(perfume['uso'])
         if isinstance(perfume.get('acordes'), str): perfume['acordes'] = json.loads(perfume['acordes'])
         if isinstance(perfume.get('precos'), str): perfume['precos'] = json.loads(perfume['precos'])
             
         return jsonify(perfume)
-
+    
 @app.route('/api/perfumes', methods=['POST'])
 def add_perfume():
     novo_perfume = request.get_json()
