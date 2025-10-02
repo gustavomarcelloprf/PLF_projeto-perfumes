@@ -42,19 +42,31 @@ def get_perfumes():
         # Retorna a lista de perfumes já convertida
         return jsonify(perfumes)
 
+@app.route('/api/perfumes', methods=['GET'])
+def get_perfumes():
+    with engine.connect() as conn:
+        result = conn.execute(text('SELECT * FROM perfumes ORDER BY id')).fetchall()
+        perfumes = [dict(row._mapping) for row in result]
+        # A conversão agora acontece sempre, para garantir o formato correto
+        for p in perfumes:
+            if isinstance(p.get('uso'), str): p['uso'] = json.loads(p['uso'])
+            if isinstance(p.get('acordes'), str): p['acordes'] = json.loads(p['acordes'])
+            if isinstance(p.get('precos'), str): p['precos'] = json.loads(p['precos'])
+        return jsonify(perfumes)
+
 @app.route('/api/perfumes/<int:id>', methods=['GET'])
 def get_single_perfume(id):
     with engine.connect() as conn:
         result = conn.execute(text('SELECT * FROM perfumes WHERE id = :id'), {'id': id}).fetchone()
         if result is None:
             return jsonify({'erro': 'Perfume não encontrado'}), 404
-        
+
         perfume = dict(result._mapping)
-        # Garante que a conversão também aconteça aqui
+        # A conversão também acontece aqui
         if isinstance(perfume.get('uso'), str): perfume['uso'] = json.loads(perfume['uso'])
         if isinstance(perfume.get('acordes'), str): perfume['acordes'] = json.loads(perfume['acordes'])
         if isinstance(perfume.get('precos'), str): perfume['precos'] = json.loads(perfume['precos'])
-            
+
         return jsonify(perfume)
     
 @app.route('/api/perfumes', methods=['POST'])

@@ -20,6 +20,7 @@ with engine.connect() as conn:
         imagem_url TEXT
     );
     '''))
+    conn.execute(text('DELETE FROM perfumes;'))
     conn.commit()
 
 # Carrega os dados do perfumes.json
